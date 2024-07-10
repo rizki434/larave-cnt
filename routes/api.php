@@ -21,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::get('/biodata',[BiodataController::class,'get'])->middleware('token');
 Route::post('/biodata',[BiodataController::class,'create'])->middleware('token');
-Route::put('/biodata',[BiodataController::class,'update'])->middleware('token');
+Route::put('/biodata/{id}',[BiodataController::class,'update'])->middleware('token');
+Route::delete('/biodata/{id}', [BiodataController::class, 'delete'])->middleware('token');

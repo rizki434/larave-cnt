@@ -10,4 +10,7 @@ class Biodata extends Model
     protected $table = 'latihan_biodata';
     public $timestamps = false;
     protected $hidden = [] ;
+    protected $fillable = [
+        'name',
+        'fullname'];
 }
